@@ -23,6 +23,10 @@ $(document).ready(function() {
       reverseArr.push(palindromeTextBox.charAt(i));
     }
     reverseArr.reverse();
-    $("#result").html(arraysEqual(array, reverseArr));
+    if (arraysEqual(array, reverseArr)) {
+      $("#result").html(arraysEqual(array, reverseArr));
+    } else {
+      $("#result").html("false");
+    }
   });
 });
